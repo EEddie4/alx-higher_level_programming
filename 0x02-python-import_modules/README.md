@@ -1,152 +1,71 @@
-# Python - Hello, World
+# Python - import & modules
 
+In this project, I (Tito) learned about importing and using functions and creating
+modules in Python. I further practiced using the builtin function
+`dir()` and using command line arguments within Python programs.
 
 ## Tasks :page_with_curl:
 
-
-
-* **0. Run Python File**
-
-  * [0-run](./0-run): Bash script that runs a Python script file saved
-
-  in the environment variable `$PYFILE`.
-
-
-
-* **1. Run inline**
-
-  * [1-run_inline](./1-run_inline): Bash script that runs Python code saved in the
-
-  environment variable `$PYCODE`.
-
-
-
-* **2. Hello, print**
-
-  * [2-print.py](./2-print.py): Python script that prints exactly `"Programming is
-
-  like building a multilingual puzzle`, followed by a new line using the function `print`.
-
-
-
-* **3. Print integer**
-
-  * [3-print_number.py](./3-print_number.py): Python script that prints the integer stored
-
-  in the variable `number`, followed by `Battery street`, followed by a new line.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py).
-
-
-
-* **4. Print float**
-
-  * [4-print_float.py](./4-print_float.py): Python script that prints the float stored
-
-  in the variable `number` with a precision of two digits.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py).
-
-
-
-* **5. Print string**
-
-  * [5-print_string.py](./5-print_string.py): Python script that prints a string stored
-
-  in the variable `str` three times, then a new line, then the first nine characters
-
-  contained in `str`, followed by another new line.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py).
-
-
-
-* **6. Play with strings**
-
-  * [6-concat.py](./6-concat.py): Python script that prints `Welcome to Holberton
-
-  School!` using the variables `str1 = "Holberton"` and `str2 = "School"`.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py).
-
-
-
-* **7. Copy - Cut - Paste**
-
-  * [7-edges.py](./7-edges.py): Python script that sets three string variables based
-
-  on the string contained in the variable `word` as follows:
-
-  * `word_first_3`: Contains the first three letters of the variable `word`.
-
-  * `word_last_2`: Contains the last two letters of the variable `word`.
-
-  * `middle_word`: Contains the value of the variable `word` without the first and last letters.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py).
-
-
-
-* **8. Create a new sentence**
-
-  * [8-concat_edges.py](./8-concat_edges.py): Python script that prints `object-oriented
-
-  programming with Python`, followed by a new line without creating new variables or
-
-  string literals.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py).
-
-
-
-* **9. Easter Egg**
-
-  * [9-easter_egg.py](./9-easter_egg.py): Python script that prints "The Zen of Python" by
-
-  Tim Peters, followed by a new line.
-
-
-
-* **10. Linked list cycle**
-
-  * [10-check_cycle.c](./10-check_cycle.c): C function that checks if a linked list
-
-  contains a cycle.
-
-  * Returns `0` if there is no cycle and `1` if there is.
-
-  * Helper files:
-
-    * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
-
-    [10-check_cycle.c](./10-check_cycle.c) (provided by Holberton School).
-
-    * [lists.h](./lists.h): Header file containing definitions and prototypes for
-
-    all types and functions used in [linked_lists.c](./linked_lists.c) and
-
-    [10-check_cycle.c](./10-check_cycle.c).
-
-
-
-* **11. Hello, write**
-
-  * [100-write.py](./100-write.py): Python script that prints exactly `and that piece of
-
-  art is useful - Dora Korpar, 2015-10-19`, followed by a new line to `stderr` using
-
-  the function `write` from the `sys` module.
-
-  * Exits with a status code of `1`.
-
-
-
-* **12. Compile**
-
-  * [101-compile](./101-compile): Python script that compiles a Python script file stored
-
-  in the environment variable `$PYFILE` and saves it to an output file
-   $PYFILEc` (ex. `export PYFILE=my_main.py` => output filename: `my_main.pyc`).
-
-* **13. ByteCode -> Python #1**
-  * [102-magic_calculation.py](./103-magic_calculation.py): Python function matching exactly a bytecode provided by Holberton School.
+* **0. Import a simple function from a simple file**
+  * [0-add.py](./0-add.py): Python program that imports the function
+  `def add(a, b):` from the file [add_0.py](./add_0.py) and prints the
+  result of the addition `1 + 2 = 3`.
+  * Output: `<a value> + <b value> = <add(a, b) value>` followed by a new line.
+
+* **1. My first toolbox!**
+  * [1-calculation.py](./1-calculation.py): Python program that imports functions
+  from the file [calculator_1.py](./1-calculator.py) and prints the result
+  of the addition, subtraction, multiplication and division of `10` and `5`.
+  * Output: `<a value> <operator> <b value> = <operation(a, b) value>` followed by a new line.
+
+* **2. How to make a script dynamic!**
+  * [2-args.py](./2-args.py): Python program that prints the number of
+  and list of its arguments.
+  * Output: `[Number of arguments] argument` (if number is one) or `arguments` (otherwise), followed by:
+    * `:` (or `.` if no argumets were passed), followed by
+    * A new line, followed by
+    * One argument per line - the position of the argument (starting at `1`) followed by `:` followed by the argument value and another new line.
+
+* **3. Infinite addition**
+  * [3-infinite_add.py](./3-infinite_add.py): Python program that prints the result of the
+  addition of all arguments.
+  * Output: Sum of the arguments followed by a new line.
+
+* **4. Who are you?**
+  * [4-hidden_discovery.py](./4-hidden_discovery.py): Python program that prints all the
+  names defined by the compiled module `hidden_4.pyc`.
+  * Output: One name per line in alphabetical order.
+  * Names starting with `__` are not printed.
+
+* **5. Everything can be imported**
+  * [5-variable_load.py](./5-variable_load.py): Python program that imorts the
+  variable `a` from the file [variable_load_5.py](./variable_load_5.py) and prints its value.
+
+* **6. Build my own calculator!**
+  * [100-my_calculator.py](./100-my_calculator.py): Python program that imports all functions
+  from the file [calculator_1.py](./calculator_1.py) and handles basic operations.
+  * Usage: `./100-my_calculator.py <a> <operator> <b>` followed by a new line.
+  * Output: `<a> <operator> <b> = <result>` followed by a new line.
+  * The parameter `operator` can be:
+    * `+` for addition
+    * `-` for subtraction
+    * `*` for multiplication
+    * `/` for division
+  * If the operator is none of the above, the function prints `Unknown operator.
+  Available operators: +, -, *, and /` followed by a new line and exits
+  with a status value of `1`.
+  * If the number of arguments is not three, the program prints `Usage: ./100-my_calculator.py <a> <operator> <b>` followed by a new line and exits with a status value of `1`.
+
+* **7. Easy print**
+  * [101-easy_print.py](./101-easy_print.py): Python program that prints
+  `#pythoniscool` followed by a new line in the standard output.
+  * Without using `print`, `eval`, `open`, or `sys`.
+
+* **8. ByteCode -> Python #3**
+  * [102-magic_calculation.py](./102-magic_calculation.py): Python function matching exactly a
+  bytecode provided by Holberton School.
+
+* **9. Fast alphabet**
+  * [103-fast_alphabet.py](./103-fast_alphabet.py): Python program that prints the alphabet in
+  uppercase, followed by a new line.
+  * Without using loops, conditoinals, `str.join()`, string literals, or system calls.
