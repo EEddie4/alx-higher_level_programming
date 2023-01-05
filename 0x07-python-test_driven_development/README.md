@@ -1,152 +1,114 @@
-# Python - Hello, World
+# 0x07. Python - Test-driven development
 
+I learned about `docstring` and `unittest` in Python.
+
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Test files.
+  * [0-add_integer.txt](./tests/0-add_integer.txt)
+  * [2-matrix_divided.txt](./tests/2-matrix_divided.txt)
+  * [3-say_my_name.txt](./tests/3-say_my_name.txt)
+  * [4-print_square.txt](./tests/4-print_square.txt)
+  * [5-text_indentation.txt](./tests/text_indentation.txt)
+  * [6-max_integer_test.py](./tests/6-max_integer_test.py)
+  * [100-matrix_mul.txt](./tests/100-matrix_mul.txt)
+  * [101-lazy_matrix_mul.txt](./tests/101-lazy_matrix_mul.txt)
+
+## Function Prototypes :floppy_disk:
+
+Prototypes for functions written in this project:
+
+| File                     | Prototype                                    |
+| ------------------------ | -------------------------------------------- |
+| `0-add_integer.py`       | `def add_integer(a, b=98):`                  |
+| `2-matrix_divided.py`    | `def matrix_divided(matrix, div):`           |
+| `3-say_my_name.py`       | `def say_my_name(first_name, last_name=""):` |
+| `4-print_square.py`      | `def print_square(size):`                    |
+| `5-text_indentation.py`  | `def text_indentation(text):`                |
+| `100-matrix_mul.py`      | `def matrix_mul(m_a, m_b):`                  |
+| `101-lazy_matrix_mul.py` | `def lazy_matrix_mul(m_a, m_b):`             |
+| `102-python.c`           | `void print_python_string(PyObject *p);`     |
 
 ## Tasks :page_with_curl:
 
-
-
-* **0. Run Python File**
-
-  * [0-run](./0-run): Bash script that runs a Python script file saved
-
-  in the environment variable `$PYFILE`.
-
-
-
-* **1. Run inline**
-
-  * [1-run_inline](./1-run_inline): Bash script that runs Python code saved in the
-
-  environment variable `$PYCODE`.
-
-
-
-* **2. Hello, print**
-
-  * [2-print.py](./2-print.py): Python script that prints exactly `"Programming is
-
-  like building a multilingual puzzle`, followed by a new line using the function `print`.
-
-
-
-* **3. Print integer**
-
-  * [3-print_number.py](./3-print_number.py): Python script that prints the integer stored
-
-  in the variable `number`, followed by `Battery street`, followed by a new line.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py).
-
-
-
-* **4. Print float**
-
-  * [4-print_float.py](./4-print_float.py): Python script that prints the float stored
-
-  in the variable `number` with a precision of two digits.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py).
-
-
-
-* **5. Print string**
-
-  * [5-print_string.py](./5-print_string.py): Python script that prints a string stored
-
-  in the variable `str` three times, then a new line, then the first nine characters
-
-  contained in `str`, followed by another new line.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py).
-
-
-
-* **6. Play with strings**
-
-  * [6-concat.py](./6-concat.py): Python script that prints `Welcome to Holberton
-
-  School!` using the variables `str1 = "Holberton"` and `str2 = "School"`.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py).
-
-
-
-* **7. Copy - Cut - Paste**
-
-  * [7-edges.py](./7-edges.py): Python script that sets three string variables based
-
-  on the string contained in the variable `word` as follows:
-
-  * `word_first_3`: Contains the first three letters of the variable `word`.
-
-  * `word_last_2`: Contains the last two letters of the variable `word`.
-
-  * `middle_word`: Contains the value of the variable `word` without the first and last letters.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py).
-
-
-
-* **8. Create a new sentence**
-
-  * [8-concat_edges.py](./8-concat_edges.py): Python script that prints `object-oriented
-
-  programming with Python`, followed by a new line without creating new variables or
-
-  string literals.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py).
-
-
-
-* **9. Easter Egg**
-
-  * [9-easter_egg.py](./9-easter_egg.py): Python script that prints "The Zen of Python" by
-
-  Tim Peters, followed by a new line.
-
-
-
-* **10. Linked list cycle**
-
-  * [10-check_cycle.c](./10-check_cycle.c): C function that checks if a linked list
-
-  contains a cycle.
-
-  * Returns `0` if there is no cycle and `1` if there is.
-
-  * Helper files:
-
-    * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
-
-    [10-check_cycle.c](./10-check_cycle.c) (provided by Holberton School).
-
-    * [lists.h](./lists.h): Header file containing definitions and prototypes for
-
-    all types and functions used in [linked_lists.c](./linked_lists.c) and
-
-    [10-check_cycle.c](./10-check_cycle.c).
-
-
-
-* **11. Hello, write**
-
-  * [100-write.py](./100-write.py): Python script that prints exactly `and that piece of
-
-  art is useful - Dora Korpar, 2015-10-19`, followed by a new line to `stderr` using
-
-  the function `write` from the `sys` module.
-
-  * Exits with a status code of `1`.
-
-
-
-* **12. Compile**
-
-  * [101-compile](./101-compile): Python script that compiles a Python script file stored
-
-  in the environment variable `$PYFILE` and saves it to an output file
-   $PYFILEc` (ex. `export PYFILE=my_main.py` => output filename: `my_main.pyc`).
-
-* **13. ByteCode -> Python #1**
-  * [102-magic_calculation.py](./103-magic_calculation.py): Python function matching exactly a bytecode provided by Holberton School.
+* **0. Integers addition**
+  * [0-add_integer.py](./0-add_integer.py): Python function that returns the integer addition
+  of two numbers.
+  * If either of `a` or `b` is not an `int` or `float`, a `TypeError` is raised
+  with the message `a must be an integer` or `b must be an integer`.
+  * If either of `a` or `b` is a `float`, it is casted to an `int`
+  before addition.
+
+* **1. Divide a matrix**
+  * [2-matrix_divided.py](./2-matrix_divided.py): Python function that divides all
+  elements of a matrix by a common divisor.
+  * Returns a new matrix representing the division of all elements of `matrix`
+  by `div`.
+  * Quotients are rounded to two decimal places.
+  * If `matrix` is not a list of lists of `int`s or `float`s, a `TypeError`
+  is raised with the message `matrix must be a matrix (list of lists) of
+  integers/floats`.
+  * If `matrix` contains rows of different lengths, a `TypeError` is raised
+  with the message `Each row of the matrix must have the same size`.
+  * If the divisor `div` is not an `int` or `float`, a `TypeError` is raised
+  with the message `div must be a number`.
+  * If `div` is `0`, a `ZeroDivisionError` is raised with the message
+  `division by zero`.
+
+* **2. Say my name**
+  * [3-say_my_name.py](./3-say_my_name.py): Python function that prints a name in
+  the format `My name is <first_name> <last_name>`.
+  * If either of `first_name` or `last_name` is not a `str`, a `TypeError` is
+  raised with the message `first_name must be a string` or `last_name must be a
+  string`.
+
+* **3. Print square**
+  * [4-print_square.py](./4-print_square.py): Python function that prints a square using
+  the `#` character.
+  * The paramter `size` represents the height/width of the square.
+  * If `size` is not an `int`, a `TypeError` is raised  with the message,
+  `size must be an integer`.
+  * If `size` is less than `0`, a `ValueError` is raised with the message `size
+  must be >= 0`.
+
+* **4. Text indentation**
+  * [5-text_indentation.py](./5-text_indentation.py): Python function that prints text with
+  indentation.
+  * Two new lines are printed after any `.`, `?`, or `:` character.
+  * If `text` is not a `str`, a `TypeError` is raised with the message `text
+  must be a string`.
+  * No spaces are printed at the beginning or end of each printed line.
+
+* **5. Max integer - Unittest**
+  * [tests/6-max_integer_test.py](./tests/6-max_integer_text.py): Python class/script
+  that runs unittests for the function `def max_integer(list=[]):`
+  (provided by Holberton School).
+
+* **6. Matrix multiplication**
+  * [100-matrix_mul.py](./100-matrix_mul.py): Python function that multiplies two matrices.
+  * Returns a new matrix representing the multiplication of `m_a` by `m_b`.
+  * If either of `m_a` or `m_b` is empty (ie. `== []` or `== [[]]`), a
+  `ValueError` is raised with the message `m_a can't be empty` or `m_b can't
+  be empty`.
+  * If either of `m_a` or `m_b` is not a list, a `TypeError` is raised with
+  the message `m_a must be a list` or `m_b` must be a list.
+  * If either of `m_a` or `m_b` is not a list of lists, a `TypeError` is raised
+  with the message `m_a must be a list of lists` or `m_b must be a list of lists`.
+  * If either of `m_a` or `m_b` is not a list of lists of `int`s or `float`s, a
+  `TypeError` is raised with the message `m_a should contain only integers or
+  floats` or `m_b should contain only integers or floats`.
+  * If either of `m_a` or `m_b` contains rows of different lengths, a `TypeError`
+  is raised with the message `each row of m_a must should be of the same size` or
+  `each row of m_b must should be of the same size`.
+  * If `m_a` and `m_b` cannot be multiplied (ie. row size of `m_a` does not match
+  column size of `m_b`), a `ValueError` is raised with the message `m_a and m_b
+  can't be multiplied`.
+
+* **7. Lazy matrix multiplication**
+  * [101-lazy_matrix_mul.py](./101-lazy_matrix_mul.py): Python function that multiplies
+  two matrices using the module `NumPy`.
+  * Identical in function to [100-matrix_mul.py](./100-matrix_mul.py).
+
+* **8. CPython #3: Python Strings**
+  * [102-python.c](./102-python.c): C function that prints basic information about Python
+  string objects.
