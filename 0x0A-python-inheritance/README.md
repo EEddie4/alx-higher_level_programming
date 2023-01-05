@@ -1,152 +1,117 @@
-# Python - Hello, World
-
-
-## Tasks :page_with_curl:
-
-
-
-* **0. Run Python File**
-
-  * [0-run](./0-run): Bash script that runs a Python script file saved
-
-  in the environment variable `$PYFILE`.
-
-
-
-* **1. Run inline**
-
-  * [1-run_inline](./1-run_inline): Bash script that runs Python code saved in the
-
-  environment variable `$PYCODE`.
-
-
-
-* **2. Hello, print**
-
-  * [2-print.py](./2-print.py): Python script that prints exactly `"Programming is
-
-  like building a multilingual puzzle`, followed by a new line using the function `print`.
-
-
-
-* **3. Print integer**
-
-  * [3-print_number.py](./3-print_number.py): Python script that prints the integer stored
-
-  in the variable `number`, followed by `Battery street`, followed by a new line.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py).
-
-
-
-* **4. Print float**
-
-  * [4-print_float.py](./4-print_float.py): Python script that prints the float stored
-
-  in the variable `number` with a precision of two digits.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py).
-
-
-
-* **5. Print string**
-
-  * [5-print_string.py](./5-print_string.py): Python script that prints a string stored
-
-  in the variable `str` three times, then a new line, then the first nine characters
-
-  contained in `str`, followed by another new line.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py).
-
-
-
-* **6. Play with strings**
-
-  * [6-concat.py](./6-concat.py): Python script that prints `Welcome to Holberton
-
-  School!` using the variables `str1 = "Holberton"` and `str2 = "School"`.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py).
-
-
-
-* **7. Copy - Cut - Paste**
-
-  * [7-edges.py](./7-edges.py): Python script that sets three string variables based
-
-  on the string contained in the variable `word` as follows:
-
-  * `word_first_3`: Contains the first three letters of the variable `word`.
-
-  * `word_last_2`: Contains the last two letters of the variable `word`.
-
-  * `middle_word`: Contains the value of the variable `word` without the first and last letters.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py).
-
-
-
-* **8. Create a new sentence**
-
-  * [8-concat_edges.py](./8-concat_edges.py): Python script that prints `object-oriented
-
-  programming with Python`, followed by a new line without creating new variables or
-
-  string literals.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py).
-
-
-
-* **9. Easter Egg**
-
-  * [9-easter_egg.py](./9-easter_egg.py): Python script that prints "The Zen of Python" by
-
-  Tim Peters, followed by a new line.
-
-
-
-* **10. Linked list cycle**
-
-  * [10-check_cycle.c](./10-check_cycle.c): C function that checks if a linked list
-
-  contains a cycle.
-
-  * Returns `0` if there is no cycle and `1` if there is.
-
-  * Helper files:
-
-    * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
-
-    [10-check_cycle.c](./10-check_cycle.c) (provided by Holberton School).
-
-    * [lists.h](./lists.h): Header file containing definitions and prototypes for
-
-    all types and functions used in [linked_lists.c](./linked_lists.c) and
-
-    [10-check_cycle.c](./10-check_cycle.c).
-
-
-
-* **11. Hello, write**
-
-  * [100-write.py](./100-write.py): Python script that prints exactly `and that piece of
-
-  art is useful - Dora Korpar, 2015-10-19`, followed by a new line to `stderr` using
-
-  the function `write` from the `sys` module.
-
-  * Exits with a status code of `1`.
-
-
-
-* **12. Compile**
-
-  * [101-compile](./101-compile): Python script that compiles a Python script file stored
-
-  in the environment variable `$PYFILE` and saves it to an output file
-   $PYFILEc` (ex. `export PYFILE=my_main.py` => output filename: `my_main.pyc`).
-
-* **13. ByteCode -> Python #1**
-  * [102-magic_calculation.py](./103-magic_calculation.py): Python function matching exactly a bytecode provided by Holberton School.
+# 0x0A. Python - Inheritance
+An introductory project on inheritance in Python
+## File Descriptions
+* (0-lookup.py)[0-lookup.py] - A function that returns the list of available attributes and methods of an object:
+  * Prototype: `def lookup(obj):`
+  * Returns a `list` object
+  * Not allowed to import any module
+```
+guillaume@ubuntu:~/0x0A$ cat 0-main.py
+#!/usr/bin/python3
+lookup = __import__('0-lookup').lookup
+
+class MyClass1(object):
+    pass
+
+class MyClass2(object):
+    my_attr1 = 3
+    def my_meth(self):
+        pass
+
+print(lookup(MyClass1))
+print(lookup(MyClass2))
+print(lookup(int))
+
+guillaume@ubuntu:~/0x0A$ ./0-main.py
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'my_attr1', 'my_meth']
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+guillaume@ubuntu:~/0x0A$ 
+```
+* (1-my_list.py)[1-my_list.py] - A class `MyList` that inherits from `list`:
+  * Public instance method: `def print_sorted(self):` that prints the list, but sorted (ascending sort)
+  * Assumes that all the elements of the list will be of type `int`
+  * Not allowed to import any module
+```
+guillaume@ubuntu:~/0x0A$ cat 1-main.py
+#!/usr/bin/python3
+MyList = __import__('1-my_list').MyList
+
+my_list = MyList()
+my_list.append(1)
+my_list.append(4)
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
+print(my_list)
+my_list.print_sorted()
+print(my_list)
+
+guillaume@ubuntu:~/0x0A$ ./1-main.py
+[1, 4, 2, 3, 5]
+[1, 2, 3, 4, 5]
+[1, 4, 2, 3, 5]
+guillaume@ubuntu:~/0x0A$ 
+```
+* (2-is_same_class.py)[2-is_same_class.py] - A function that returns `True` if the object is exactly an instance of the specified class; otherwise `False`:
+  * Prototype: `def is_same_class(obj, a_class):`
+  * Not allowed to import any module
+```
+guillaume@ubuntu:~/0x0A$ cat 2-main.py
+#!/usr/bin/python3
+is_same_class = __import__('2-is_same_class').is_same_class
+
+a = 1
+if is_same_class(a, int):
+    print("{} is an instance of the class {}".format(a, int.__name__))
+if is_same_class(a, float):
+    print("{} is an instance of the class {}".format(a, float.__name__))
+if is_same_class(a, object):
+    print("{} is an instance of the class {}".format(a, object.__name__))
+
+guillaume@ubuntu:~/0x0A$ ./2-main.py
+1 is an instance of the class int
+guillaume@ubuntu:~/0x0A$ 
+```
+* (3-is_kind_of_class.py)[3-is_kind_of_class.py] - A function that returns `True` if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class ; otherwise `False`:
+  * Prototype: `def is_kind_of_class(obj, a_class):`
+  * Not allowed to import any module
+```
+guillaume@ubuntu:~/0x0A$ cat 3-main.py
+#!/usr/bin/python3
+is_kind_of_class = __import__('3-is_kind_of_class').is_kind_of_class
+
+a = 1
+if is_kind_of_class(a, int):
+    print("{} comes from {}".format(a, int.__name__))
+if is_kind_of_class(a, float):
+    print("{} comes from {}".format(a, float.__name__))
+if is_kind_of_class(a, object):
+    print("{} comes from {}".format(a, object.__name__))
+
+guillaume@ubuntu:~/0x0A$ ./3-main.py
+1 comes from int
+1 comes from object
+guillaume@ubuntu:~/0x0A$ 
+```
+* (4-inherits_from.py)[4-inherits_from.py] - A function that returns `True` if the object is an instance of a class that inherited (directly or indirectly) from the specified class ; otherwise `False`:
+  * Prototype: `def inherits_from(obj, a_class):`
+  * Not allowed to import any module
+```
+guillaume@ubuntu:~/0x0A$ cat 4-main.py
+#!/usr/bin/python3
+inherits_from = __import__('4-inherits_from').inherits_from
+
+a = True
+if inherits_from(a, int):
+    print("{} inherited from class {}".format(a, int.__name__))
+if inherits_from(a, bool):
+    print("{} inherited from class {}".format(a, bool.__name__))
+if inherits_from(a, object):
+    print("{} inherited from class {}".format(a, object.__name__))
+
+guillaume@ubuntu:~/0x0A$ ./4-main.py
+True inherited from class int
+True inherited from class object
+guillaume@ubuntu:~/0x0A$ 
+```
