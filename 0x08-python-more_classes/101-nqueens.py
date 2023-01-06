@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+# Author: ThankGod Ugobo
 """Solves the N-queens puzzle.
 
 Determines all possible solutions to placing N
