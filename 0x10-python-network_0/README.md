@@ -1,152 +1,53 @@
-# Python - Hello, World
+# 0x10. Python - Network #0
 
+## Description
+What you should learn from this project:
 
-## Tasks :page_with_curl:
+* What a URL is
+* What HTTP is
+* How to read a URL
+* The scheme for a HTTP URL
+* What a domain name is
+* What a sub-domain is
+* How to define a port number in a URL
+* What a query string is
+* What an HTTP request is
+* What an HTTP response is
+* What HTTP headers are
+* What the HTTP message body is
+* What an HTTP request method is
+* What an HTTP response status code is
+* What an HTTP Cookie is
+* How to make a request with cURL
+* What happens when you type google.com in your browser (Application level)
 
+---
 
+### [0. cURL body size](./0-body_size.sh)
+* Write a Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
 
-* **0. Run Python File**
 
-  * [0-run](./0-run): Bash script that runs a Python script file saved
+### [1. cURL to the end](./1-body.sh)
+* Write a Bash script that takes in a URL, sends a GET request to the URL, and displays the body of the response
 
-  in the environment variable `$PYFILE`.
 
+### [2. cURL Method](./2-delete.sh)
+* Write a Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
 
 
-* **1. Run inline**
+### [3. cURL only methods](./3-methods.sh)
+* Write a Bash script that takes in a URL and displays all HTTP methods the server will accept.
 
-  * [1-run_inline](./1-run_inline): Bash script that runs Python code saved in the
 
-  environment variable `$PYCODE`.
+### [4. cURL headers](./4-header.sh)
+* Write a Bash script that takes in a URL as an argument, sends a GET request to the URL, and displays the body of the response
 
 
+### [5. cURL POST parameters](./5-post_params.sh)
+* Write a Bash script that takes in a URL, sends a POST request to the passed URL, and displays the body of the response
 
-* **2. Hello, print**
 
-  * [2-print.py](./2-print.py): Python script that prints exactly `"Programming is
+### [6. Find a peak](./6-peak.py)
+* Technical interview preparation: 
 
-  like building a multilingual puzzle`, followed by a new line using the function `print`.
-
-
-
-* **3. Print integer**
-
-  * [3-print_number.py](./3-print_number.py): Python script that prints the integer stored
-
-  in the variable `number`, followed by `Battery street`, followed by a new line.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py).
-
-
-
-* **4. Print float**
-
-  * [4-print_float.py](./4-print_float.py): Python script that prints the float stored
-
-  in the variable `number` with a precision of two digits.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py).
-
-
-
-* **5. Print string**
-
-  * [5-print_string.py](./5-print_string.py): Python script that prints a string stored
-
-  in the variable `str` three times, then a new line, then the first nine characters
-
-  contained in `str`, followed by another new line.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py).
-
-
-
-* **6. Play with strings**
-
-  * [6-concat.py](./6-concat.py): Python script that prints `Welcome to Holberton
-
-  School!` using the variables `str1 = "Holberton"` and `str2 = "School"`.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py).
-
-
-
-* **7. Copy - Cut - Paste**
-
-  * [7-edges.py](./7-edges.py): Python script that sets three string variables based
-
-  on the string contained in the variable `word` as follows:
-
-  * `word_first_3`: Contains the first three letters of the variable `word`.
-
-  * `word_last_2`: Contains the last two letters of the variable `word`.
-
-  * `middle_word`: Contains the value of the variable `word` without the first and last letters.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py).
-
-
-
-* **8. Create a new sentence**
-
-  * [8-concat_edges.py](./8-concat_edges.py): Python script that prints `object-oriented
-
-  programming with Python`, followed by a new line without creating new variables or
-
-  string literals.
-
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py).
-
-
-
-* **9. Easter Egg**
-
-  * [9-easter_egg.py](./9-easter_egg.py): Python script that prints "The Zen of Python" by
-
-  Tim Peters, followed by a new line.
-
-
-
-* **10. Linked list cycle**
-
-  * [10-check_cycle.c](./10-check_cycle.c): C function that checks if a linked list
-
-  contains a cycle.
-
-  * Returns `0` if there is no cycle and `1` if there is.
-
-  * Helper files:
-
-    * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
-
-    [10-check_cycle.c](./10-check_cycle.c) (provided by Holberton School).
-
-    * [lists.h](./lists.h): Header file containing definitions and prototypes for
-
-    all types and functions used in [linked_lists.c](./linked_lists.c) and
-
-    [10-check_cycle.c](./10-check_cycle.c).
-
-
-
-* **11. Hello, write**
-
-  * [100-write.py](./100-write.py): Python script that prints exactly `and that piece of
-
-  art is useful - Dora Korpar, 2015-10-19`, followed by a new line to `stderr` using
-
-  the function `write` from the `sys` module.
-
-  * Exits with a status code of `1`.
-
-
-
-* **12. Compile**
-
-  * [101-compile](./101-compile): Python script that compiles a Python script file stored
-
-  in the environment variable `$PYFILE` and saves it to an output file
-   $PYFILEc` (ex. `export PYFILE=my_main.py` => output filename: `my_main.pyc`).
-
-* **13. ByteCode -> Python #1**
-  * [102-magic_calculation.py](./103-magic_calculation.py): Python function matching exactly a bytecode provided by Holberton School.
+---
